@@ -1,2 +1,2 @@
 # CoolWeather
-初学安卓
+First Android Project

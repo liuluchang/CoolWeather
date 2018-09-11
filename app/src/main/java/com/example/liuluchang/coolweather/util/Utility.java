@@ -53,15 +53,16 @@ public class Utility {
             	//TODO
                 JSONArray allCity = new JSONArray(response);
                 for (int i = 0; i < allCity.length(); i++){
-                    JSONObject cityObjecy = allCity.getJSONObject(i);
+                    JSONObject cityObject = allCity.getJSONObject(i);
                     City city = new City();
-                    city.setCityName(cityObjecy.getString("name"));
-                    city.setCityCode(cityObjecy.getInt("id"));
+                    city.setCityName(cityObject.getString("name"));
+                    city.setCityCode(cityObject.getInt("id"));
                     city.setProvinceId(provinceId);
                     city.save();
 
                 }
 
+                return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -88,6 +89,7 @@ public class Utility {
 
                 }
 
+                return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }

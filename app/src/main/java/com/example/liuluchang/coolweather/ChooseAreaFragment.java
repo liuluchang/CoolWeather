@@ -278,6 +278,7 @@ public class ChooseAreaFragment extends android.support.v4.app.Fragment {
                             }
                         }
                     });
+
                 }
 
             }

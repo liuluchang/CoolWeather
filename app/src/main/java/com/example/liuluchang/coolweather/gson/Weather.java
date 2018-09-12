@@ -6,11 +6,11 @@ import java.util.List;
 
 /**
  * Author: liuluchang
- * Time:  2018/9/7
- * Description: This is Weacher
+ * Time:  2018/9/12
+ * Description: This is Weather
  */
 
-public class Weacher {
+public class Weather {
 
     public String status;
 
@@ -24,5 +24,4 @@ public class Weacher {
 
     @SerializedName("daily_forecast")
     public List<Forecast> forecastList;
-
 }

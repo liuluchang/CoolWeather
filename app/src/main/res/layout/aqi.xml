@@ -32,6 +32,7 @@
                 android:layout_centerInParent="true">
 
                 <TextView
+                    android:id="@+id/aqi_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/sysTitleColor"
@@ -65,6 +66,7 @@
                 android:layout_centerInParent="true">
 
                 <TextView
+                    android:id="@+id/pm25_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/sysTitleColor"

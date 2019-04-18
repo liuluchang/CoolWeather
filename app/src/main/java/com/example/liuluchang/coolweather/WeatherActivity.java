@@ -5,10 +5,13 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +41,8 @@ public class WeatherActivity extends AppCompatActivity {
     public SwipeRefreshLayout swipeRefreshLayout;
 
     private Button navLeftBtn;
+
+    public DrawerLayout drawerLayout;
 
     private TextView titleCity;
 
@@ -90,6 +95,7 @@ public class WeatherActivity extends AppCompatActivity {
         bingPicImg = findViewById(R.id.bing_pic_img);
         swipeRefreshLayout = findViewById(R.id.swipe_refresh);
         navLeftBtn = findViewById(R.id.nav_left_button);
+        drawerLayout = findViewById(R.id.drawerLayout);
 
         //获取数据
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -128,6 +134,7 @@ public class WeatherActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.print("ssssss");
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
     }

@@ -98,8 +98,14 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
 
-        //加载背景图片
-        loadBingPic();
+        String bingPic = preferences.getString("bingPic",null);
+        if (bingPic != null){
+            Glide.with(WeatherActivity.this).load(bingPic).into(bingPicImg);
+        }else {
+            //加载背景图片
+            loadBingPic();
+        }
+
     }
 
     //请求背景图片

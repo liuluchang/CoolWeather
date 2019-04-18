@@ -8,8 +8,10 @@ import android.preference.PreferenceManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -34,6 +36,8 @@ public class WeatherActivity extends AppCompatActivity {
     private ScrollView weatherLayout;
 
     public SwipeRefreshLayout swipeRefreshLayout;
+
+    private Button navLeftBtn;
 
     private TextView titleCity;
 
@@ -85,6 +89,7 @@ public class WeatherActivity extends AppCompatActivity {
         sportText =  findViewById(R.id.sport_text);
         bingPicImg = findViewById(R.id.bing_pic_img);
         swipeRefreshLayout = findViewById(R.id.swipe_refresh);
+        navLeftBtn = findViewById(R.id.nav_left_button);
 
         //获取数据
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -110,11 +115,19 @@ public class WeatherActivity extends AppCompatActivity {
             loadBingPic();
         }
 
-        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
+        //swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 requestWeather(mWeatherId);
+            }
+        });
+
+        //导航栏按钮
+        navLeftBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.print("ssssss");
             }
         });
     }

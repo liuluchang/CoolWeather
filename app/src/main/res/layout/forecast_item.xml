@@ -3,7 +3,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimaryDark"
     android:layout_margin="15dp">
 
     <TextView
@@ -13,8 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="left"
-        android:textColor="@color/sysTitleColor"
-        android:text="2018-09-12" />
+        android:textColor="@color/sysTitleColor" />
 
     <TextView
     android:id="@+id/info_text"
@@ -23,8 +21,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:gravity="center"
-    android:textColor="@color/sysTitleColor"
-    android:text="阵雨" />
+    android:textColor="@color/sysTitleColor" />
 
     <TextView
         android:id="@+id/max_text"
@@ -33,8 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="right"
-        android:textColor="@color/sysTitleColor"
-        android:text="23" />
+        android:textColor="@color/sysTitleColor" />
 
     <TextView
         android:id="@+id/min_text"
@@ -43,8 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="right"
-        android:textColor="@color/sysTitleColor"
-        android:text="15" />
+        android:textColor="@color/sysTitleColor" />
 
 
 </LinearLayout>

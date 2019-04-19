@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.liuluchang.coolweather.gson.Forecast;
 import com.example.liuluchang.coolweather.gson.Weather;
+import com.example.liuluchang.coolweather.service.UpdateService;
 import com.example.liuluchang.coolweather.util.HttpUtil;
 import com.example.liuluchang.coolweather.util.Utility;
 
@@ -204,7 +205,6 @@ public class WeatherActivity extends AppCompatActivity {
 
                        } else {
                            Toast.makeText(WeatherActivity.this, "获取天气数据失败!", Toast.LENGTH_SHORT).show();
-
                        }
 
                        swipeRefreshLayout.setRefreshing(false);
@@ -259,6 +259,11 @@ public class WeatherActivity extends AppCompatActivity {
 
         //显示
         weatherLayout.setVisibility(View.VISIBLE);
+
+        //开发定时服务
+        Intent intent = new Intent(WeatherActivity.this, UpdateService.class);
+        startService(intent);
+
     }
 
 
